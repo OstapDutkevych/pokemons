@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit, AfterContentInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 import { ItemPokemon } from 'src/app/interfaces/pokemon';
 interface PokemonFavourite {

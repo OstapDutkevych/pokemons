@@ -1,4 +1,4 @@
-import { Component, OnInit, TrackByFunction } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, TrackByFunction } from '@angular/core';
 import { LOCAL_STORAGE } from 'src/app/enums/constants';
 import { ItemPokemon, PokemonModel } from 'src/app/interfaces/pokemon';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
@@ -6,7 +6,8 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 @Component({
   selector: 'app-favourite-pokemons',
   templateUrl: './favourite-pokemons.component.html',
-  styleUrls: ['./favourite-pokemons.component.css']
+  styleUrls: ['./favourite-pokemons.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FavouritePokemonsComponent implements OnInit {
 
