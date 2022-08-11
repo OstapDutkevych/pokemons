@@ -31,8 +31,6 @@ export class ListPokemonsComponent implements OnInit, OnDestroy {
         ) { }
 
     ngOnInit(): void { 
-        console.log('LIST');
-        
          this.localStorageService.resetLocalSorageSubject().subscribe((item)=>{
             this.activePaginationRoute()
         })
@@ -88,8 +86,6 @@ export class ListPokemonsComponent implements OnInit, OnDestroy {
 
 
     onTableDataChange(event: number) {
-        console.log('onTableDataChange');
-        
         if (!event) {
             const savedInitPage: any = localStorage.getItem('pagination_list')
             const parsedPageData = JSON.parse(savedInitPage)
