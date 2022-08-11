@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterContentInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Subscription, take } from 'rxjs';
 import { LOCAL_STORAGE } from 'src/app/enums/constants';
@@ -11,6 +11,7 @@ import { PokemonsService } from 'src/app/services/pokemons.service';
     selector: 'app-list-pokemons',
     templateUrl: './list-pokemons.component.html',
     styleUrls: ['./list-pokemons.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class ListPokemonsComponent implements OnInit, OnDestroy {
@@ -26,6 +27,7 @@ export class ListPokemonsComponent implements OnInit, OnDestroy {
         private router: Router,
         private activatedRoute: ActivatedRoute,
         private localStorageService: LocalStorageService,
+        private cdRef: ChangeDetectorRef
         ) { }
 
     ngOnInit(): void { 
@@ -36,7 +38,6 @@ export class ListPokemonsComponent implements OnInit, OnDestroy {
         })
          this.activePaginationRoute()
     }
-
     ngOnDestroy(){
         this.routeSubscription.unsubscribe()
     }
@@ -80,11 +81,15 @@ export class ListPokemonsComponent implements OnInit, OnDestroy {
                 this.modifiedAllPokemons = result;
                 this.checkFavouritesPokemon()
                 this.paginationData.totalItems = this.pokemonService.resultPokemos.count;
+                this.cdRef.detectChanges()
             })
+            this.cdRef.markForCheck()
     }
 
 
     onTableDataChange(event: number) {
+        console.log('onTableDataChange');
+        
         if (!event) {
             const savedInitPage: any = localStorage.getItem('pagination_list')
             const parsedPageData = JSON.parse(savedInitPage)
@@ -106,5 +111,4 @@ export class ListPokemonsComponent implements OnInit, OnDestroy {
     identify(index: number, item: any) {
         return item;
     }
-
 }
