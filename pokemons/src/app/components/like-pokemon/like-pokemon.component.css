@@ -1,0 +1,28 @@
+.wrapper_like {
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+}
+
+.toggle_heart {
+    display: none;
+  }
+
+  .toggle_heart:checked + label {
+    color: #e2264d;
+  }
+  .toggle_heart:checked + label:hover {
+    color: #e0a0cd;
+  }
+
+  .label_heart {
+    align-self: center;
+    color: #aab8c2;
+    font-size: 1.8em;
+    cursor: pointer;
+  }
+
+  .label_heart:hover {
+    color: #e0a0cd;
+  }

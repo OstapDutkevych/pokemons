@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+li, a, button, span {
+    font-family: "Lilita One", sans-serif;
+}
+
+body {
+    background-color: rgb(255, 230, 230) !important;
+}

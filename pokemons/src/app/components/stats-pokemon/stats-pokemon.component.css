@@ -1,0 +1,42 @@
+.stats {
+    background-color: #30a7d7;
+    width: 300px;
+    padding: 50px 0;
+    border-radius: 10%;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stats ul {
+    list-style: none;
+  }
+
+  .stats span {
+    text-align: center;
+  }
+
+  .stats .attribute-title {
+    font-family: "Flexo-Medium",arial,sans-serif;
+    font-weight: 600;
+    clear: both;
+    color: #fff;
+    font-size: 100%;
+    margin: 1.25em 0 0 1.25em;
+    text-transform: none;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .stats .attribute-value {
+    clear: both;
+    color: #212121;
+    font-size: 125%;
+    margin: 0.75em 1.5em 0 1em;
+    white-space: normal;
+    word-break: break-word;
+  }
+  span {
+    font-size: 27px;
+}

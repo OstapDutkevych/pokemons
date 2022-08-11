@@ -1,0 +1,23 @@
+<ul *ngIf="modifiedAllPokemons.length; else notFoundPokemons">
+    <li *ngFor="let pokemon of modifiedAllPokemons
+    | paginate:paginationData; trackBy:identify;let i = index
+    ">
+        <app-pokemon-card 
+            [pokemon]="pokemon" 
+            [index]="i">
+        </app-pokemon-card>
+    </li>
+</ul>
+<div class="pagination" *ngIf="modifiedAllPokemons.length">
+    <pagination-controls 
+        previousLabel="Prev" 
+        nextLabel="Next" 
+        (pageChange)="onTableDataChange($event)">
+    </pagination-controls>
+
+</div>
+
+<ng-template #notFoundPokemons>
+    <span> </span>
+</ng-template>
+

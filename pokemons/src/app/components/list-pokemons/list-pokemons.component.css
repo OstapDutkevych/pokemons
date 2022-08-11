@@ -1,0 +1,26 @@
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+ul li {
+    position: relative;
+    background-color:white;
+    width: 180px;
+    height: 230px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5%;
+}
+ul li:hover {
+    background-color: rgb(224, 241, 255);
+    cursor: pointer;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

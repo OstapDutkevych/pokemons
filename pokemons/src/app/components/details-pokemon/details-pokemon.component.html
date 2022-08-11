@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <ul class="pokemon_detail">
+        <li>
+            <span>{{currentPokemon?.name | titlecase}}</span>
+            <img width="260px" height="330px" [src]="currentPokemon?.sprites?.other?.dream_world?.front_default" alt="">
+            <app-like-pokemon 
+                [index]="1"
+                [pokemon]="currentPokemon"
+                >
+            </app-like-pokemon>
+        </li>
+    </ul>
+    <app-stats-pokemon
+    [stats]="currentPokemon?.stats"
+    >
+    </app-stats-pokemon>
+</div>

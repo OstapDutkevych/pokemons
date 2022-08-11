@@ -1,0 +1,9 @@
+<div class="stats">
+    <ul>
+        <span>Stats</span>
+        <li *ngFor="let item of stats">
+            <span class="attribute-title">{{item.stat.name}}:</span>
+            <span class="attribute-value">{{item.base_stat}}</span>
+        </li>
+    </ul>
+</div>

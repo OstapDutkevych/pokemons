@@ -1,0 +1,18 @@
+<header>
+    <div class="logo_img" (click)="navigateToListsPokemon()">
+        <img src="assets/images/logo.png" alt="logo" class="logo">
+    </div>
+
+    <nav>
+        <ul class="nav__links">
+            <li routerLinkActive="active" (click)="clickOnPokemonList()">
+                <img src="assets/images/pokemon_icon.png" width='15px' height='15px' alt="icon">
+                <a>Pokemon list</a>
+            </li>
+            <li routerLinkActive="active" routerLink="/favourite-pokemons">
+                <img src="assets/images/pokemon_icon.png" width='15px' height='15px' alt="icon">
+                <a>Favorite pokemons</a>
+            </li>
+        </ul>
+    </nav>
+</header>

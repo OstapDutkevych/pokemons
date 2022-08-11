@@ -1,0 +1,11 @@
+.no_image{
+    height: 100px;
+}
+
+.no_image span {
+    color: red;
+}
+.item_pokemon {
+    height: 100%;
+}
+

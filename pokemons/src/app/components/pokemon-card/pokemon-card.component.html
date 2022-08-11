@@ -1,0 +1,16 @@
+<div class="item_pokemon" (click)="showDetailPokemon(pokemon)">
+    <div class="img_pokemon" *ngIf="srcImage; else withoutImage">
+        <img width='160px' height="200px" [src]="srcImage" alt="">
+    </div>
+    <ng-template #withoutImage>
+        <div class="no_image">
+            <span>Image doesn't provide for this pokemon</span>
+        </div>
+    </ng-template>
+    <span>{{pokemon.name | titlecase}}</span>
+</div>
+<app-like-pokemon 
+    [index]="index"
+    [pokemon]="pokemon"
+    >
+</app-like-pokemon>

@@ -1,0 +1,13 @@
+<ul *ngIf="allFavouritePokemons.length;else notFoundPokemons">
+    <li *ngFor="let pokemon of allFavouritePokemons; trackBy:identify;let i = index">
+        <app-pokemon-card 
+            [pokemon]="pokemon" 
+            [index]="i"
+            >
+        </app-pokemon-card>
+    </li>
+</ul>
+
+<ng-template #notFoundPokemons>
+    <span> Doesn't exist favourite pokemons</span>
+</ng-template>

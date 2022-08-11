@@ -1,0 +1,4 @@
+<div class="wrapper_like">
+    <input class="toggle_heart" [id]="'toggle' + index" type="checkbox" [checked]='pokemon?.favourite' />
+    <label class="label_heart" [for]="'toggle' + index" (click)="addToFavourites(pokemon)">❤</label>
+</div>
